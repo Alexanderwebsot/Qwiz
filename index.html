@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Qwiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- title icon-->
+	<link rel="shortcut icon" type="image/x-icon" href="Favicon.ico">
+	<!-- libs css-->
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="main-page">
+<div class="dark-window"></div>
+<div class="final-modal">
+	<img src="img/finality-bg.png" alt="" class="final-modal__bg pc-true">
+	<img src="img/final-modal-bg.png" alt="" class="final-modal__bg mob-true">
+	<img src="img/pen-modal.png" alt="" class="final-modal__pen pc-true">
+	<img src="img/pen-modal-mob.png" alt="" class="final-modal__pen mob-true">
+	<div class="container">
+		<img src="img/loading.png" alt="" class="final-modal-loading">
+		<h4 class="final-modal__title">
+			Идет отправка <br>
+			ответов специалисту...
+		</h4>
+		<span class="final-modal__enter">
+			Сбор ответов . . .
+		</span>
+	</div>
+</div>
+<div class="qwiz-modal">
+	<div class="qwiz-modal-inner" id="qwiz-modal-inner">
+		<div class="qwiz-modal-top">
+			<div class="qwiz-modal-left">
+				<span class="qwiz-modal-left__text">
+					Пройдите тест до конца и получите детальный отчет по вашему случаю
+				</span>
+				<div class="qwiz-modal-slider-all">
+					<div class="qwiz-modal-slider-all_slide">
+						<div class="qwiz-modal-line">
+							<div class="qwiz-modal-line__progress"></div>
+							<div class="qwiz-modal-line__text">
+								<span>1</span> вопрос из 5
+							</div>
+						</div>
+						<div class="qwiz-modal-slider-left">
+							<div class="qwiz-modal-slide">
+								<h3 class="qwiz-modal-left__title">
+									Вам уже удалось получить <br>
+									<strong>акт о заливе</strong> помещения?
+								</h3>
+								<div class="qwiz-modal-slide-row">
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_yes">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Да, удалось
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Нет, акта еще нет
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_big">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Нужна помощь в получении
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="qwiz-modal-slider-all_slide">
+						<div class="qwiz-modal-line qwiz-modal-line-2">
+							<div class="qwiz-modal-line__progress"></div>
+							<div class="qwiz-modal-line__text">
+								<span>2</span> вопрос из 5
+							</div>
+						</div>
+						<div class="qwiz-modal-slider-left">
+							<div class="qwiz-modal-slide">
+								<h3 class="qwiz-modal-left__title">
+									Из содержания акта понятен <br>
+									<strong>виновник залива?</strong>
+								</h3>
+								<div class="qwiz-modal-slide-row qwiz-modal-slide-row-2">
+									<div class="qwiz-modal-slide-item">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Да, понятно
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Нет, не понятно
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_big">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Не знаю
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="qwiz-modal-slider-all_slide">
+						<div class="qwiz-modal-line qwiz-modal-line-3">
+							<div class="qwiz-modal-line__progress"></div>
+							<div class="qwiz-modal-line__text">
+								<span>3</span> вопрос из 5
+							</div>
+						</div>
+						<div class="qwiz-modal-slider-left">
+							<div class="qwiz-modal-slide">
+								<h3 class="qwiz-modal-left__title">
+									<strong>Сколько помещений </strong> <br>
+									пострадало после залива?
+								</h3>
+								<div class="qwiz-modal-slide-row qwiz-modal-slide-row_mir">
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_spec qwiz-modal-slide-item__mirror">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											<strong class="mob-true">1</strong><strong class="pc-true">Одно</strong> помещение
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item__mirror">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											<strong class="mob-true">2</strong><strong class="pc-true">Два</strong> помещения
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item__mirror">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											<strong class="mob-true">3</strong><strong class="pc-true">Три</strong> помещения
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item__mirror">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											<strong class="mob-true">4</strong><strong class="pc-true">Четыре</strong> и более
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="qwiz-modal-slider-all_slide">
+						<div class="qwiz-modal-line qwiz-modal-line-4">
+							<div class="qwiz-modal-line__progress"></div>
+							<div class="qwiz-modal-line__text">
+								<span>4</span> вопрос из 5
+							</div>
+						</div>
+						<div class="qwiz-modal-slider-left">
+							<div class="qwiz-modal-slide">
+								<h3 class="qwiz-modal-left__title">
+									Оцените <strong>тяжесть</strong> ущерба:
+								</h3>
+								<div class="qwiz-modal-slide-row qwiz-modal-slide-row_h">
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_height">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Есть небольшие <br>
+											следы затопления <br>
+											<span>(подтеки и пятна)</span>
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_height">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Значительные <br>
+											следы затопления
+											<span>(вздутие пола, отслоение обоев)</span>
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_big">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Полный потоп
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="qwiz-modal-slider-all_slide">
+						<div class="qwiz-modal-line qwiz-modal-line-5">
+							<div class="qwiz-modal-line__progress"></div>
+							<div class="qwiz-modal-line__text">
+								<span>5</span> вопрос из 5
+							</div>
+						</div>
+						<div class="qwiz-modal-slider-left">
+							<div class="qwiz-modal-slide">
+								<h3 class="qwiz-modal-left__title">
+									Как <strong>давно </strong> <br class="mob-true">
+									произошел залив?
+								</h3>
+								<div class="qwiz-modal-slide-row qwiz-modal-slide-row_last">
+									<div class="qwiz-modal-slide-item">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Сегодня
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Вчера или пару дней назад
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_time">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Более недели
+										</span>
+									</div>
+									<div class="qwiz-modal-slide-item qwiz-modal-slide-item_time">
+										<span class="qwiz-modal-slide-item__elipse"></span>
+										<span class="qwiz-modal-slide-item__title">
+											Более месяца
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="qwiz-modal-slide-arrows">
+					<a href="#" class="qwiz-modal-slide-arrow__prev btn">
+						<img src="img/arrow-qwiz-left.png" alt="" class="pc-true">
+						<img src="img/qwiz-mobile-l.png" alt="" class="mob-true">
+						<span>назад</span>
+					</a>
+					<a href="#" class="qwiz-modal-slide-arrow__next btn">
+						<span>вперед</span>
+						<img src="img/arrow-qwiz-left.png" alt="" class="pc-true">
+						<img src="img/qwiz-mobile-l.png" alt="" class="mob-true">
+					</a>
+				</div>
+			</div>
+			<div class="qwiz-modal-right">
+				<div class="qwiz-modal-block__text-top">
+					<img src="img/avatar-qwiz.png" alt="" class="qwiz-modal-block__text__img">
+					<div class="qwiz-modal-block__text__text">
+						<div class="qwiz-modal-block__text__title">
+							<strong><span>Иван Иванов</span> <br>
+							юрист</strong>
+						</div>
+						<p class="qwiz-modal-block__text__content">
+							С 2015 года помог возместить <br>
+							ущерб на общую сумму более <br>
+							﻿455 000 000 руб.
+						</p>
+					</div>
+				</div>
+				<div class="qwiz-modal-right-wrapper">
+					<div class="qwiz-modal-right_i">
+						<img src="img/i_small.png" alt="">
+					</div>
+					<div class="qwiz-modal-text-slider">
+						<p class="qwiz-modal-right__text">
+							С помощью этого документа можно 
+							зафиксировать факт затопления, определить виновника и начать разбирательства. Акт о заливе можно получить в Управляющей компании
+						</p>
+						<p class="qwiz-modal-right__text">
+							На основании акта мы можем 
+							начать оценку ущерба, чтобы потом предъявить требования к виновнику затопления
+						</p>
+						<p class="qwiz-modal-right__text">
+							От количества помещений зависит стоимость экспертизы и размер компенсации
+						</p>
+						<p class="qwiz-modal-right__text">
+							На основании акта мы можем 
+							начать оценку ущерба, чтобы потом предъявить требования к виновнику затопления
+						</p>
+						<p class="qwiz-modal-right__text">
+							Давность события напрямую 
+							влияет на количество зафиксированных доказательств ущерба. Если залив 
+							был давно, многие следы уже исчезли 
+							и доказать ущерб будет тяжелее
+						</p>
+					</div>
+				</div>
+				<div class="qwiz-modal-right-soc">
+					<span class="qwiz-modal-right-soc__title">
+						Получить <br>
+						консультацию <br>
+						сейчас:
+					</span>
+					<div class="nav-soc">
+						<a href="#" class="nav-soc__item nav-soc__item_1">
+							<img src="img/watcap.png" alt="" class="hover-none-img">
+							<img src="img/watcap_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_2">
+							<img src="img/telegram.png" alt="" class="hover-none-img">
+							<img src="img/telegram_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_3">
+							<img src="img/vkontakte.png" alt="" class="hover-none-img">
+							<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="qwiz-modal-bottom">
+			<span class="qwiz-modal-bottom__title">
+				Пройдите тест до конца и заберите:
+			</span>
+			<div class="qwiz-modal-row">
+				<div class="qwiz-modal-block">
+					<img src="img/qwiz-files-m-1.png" alt="" class="qwiz-modal-block__img_m mob-true">
+					<div class="qwiz-modal-block-wrapper">
+						<h4 class="qwiz-modal-block__title">
+							Пошаговый план действий <br>
+							по взысканию ущерба
+						</h4>
+						<p class="qwiz-modal-block__text">
+							
+						</p>
+					</div>
+					<img src="img/qwiz-1.png" alt="" class="qwiz-modal-block__img pc-true">
+				</div>
+				<div class="qwiz-modal-block">
+					<div class="qwiz-modal-block-wrapper">
+						<h4 class="qwiz-modal-block__title">
+							Рекомендации по работе <br>
+							с соседями, УК или ГБУ
+						</h4>
+						<p class="qwiz-modal-block__text">
+							и узнаете, можно ли решить <br>
+							проблему без суда
+						</p>
+					</div>
+					<img src="img/qwiz-files-m-2.png" alt="" class="qwiz-modal-block__img_m mob-true">
+					<img src="img/qwiz-2.png" alt="" class="qwiz-modal-block__img pc-true">
+				</div>
+				<div class="qwiz-modal-block">
+					<img src="img/qwiz-files-m-3.png" alt="" class="qwiz-modal-block__img_m mob-true">
+					<div class="qwiz-modal-block-wrapper">
+						<h4 class="qwiz-modal-block__title">
+							Инструкцию «Как избежать <br>
+							ошибок при составлении <br>
+							акта о заливе
+						</h4>
+						<p class="qwiz-modal-block__text">
+							и что делать, если <br>
+							они уже допущены»
+						</p>
+					</div>
+					
+					<img src="img/qwiz-3.png" alt="" class="qwiz-modal-block__img pc-true">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<header class="header">
+	<img src="img/header-bg.jpg" alt="" class="header__bg pc-true">
+	<img src="img/header-bg-mobile.jpg" alt="" class="header__bg mob-true">
+	<nav class="header-nav">
+		<div class="container">
+			<div class="nav-row" data-aos="fade-bottom" data-aos-duration="1000">
+				<a href="#" class="header-nav__logo">
+					<img src="img/logo.png" alt="">
+					<p class="header-nav__logo_text">
+						<span>ЮЦ ПУШКАРЕВ И ПАРТНЕРЫ</span>
+						Оценка ущерба и возмещение средств 
+						﻿при заливе помещений в Москве 
+						и области. Работаем с 2016 года
+					</p>
+				</a>
+				<div class="nav-mobile-wrapper">
+					<div class="nav-soc">
+						<a href="#" class="nav-soc__item nav-soc__item_1">
+							<img src="img/watcap.png" alt="" class="hover-none-img">
+							<img src="img/watcap_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_2">
+							<img src="img/telegram.png" alt="" class="hover-none-img">
+							<img src="img/telegram_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_3">
+							<img src="img/vkontakte.png" alt="" class="hover-none-img">
+							<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
+						</a>
+					</div>
+					<div class="nav-phone">
+						<a href="tel:88001234567" class="nav-phone__number">
+							<img src="img/phone.png" alt="">
+							8 800 123-45-67
+						</a>
+						<span class="nav-phone__text">
+							Консультация бесплатно
+						</span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<div class="header-content">
+		<div class="container">
+			<h1 class="header-content__title">
+				Узнайте, сумму компенсации <br class="mob-true">
+				<strong>за залив вашей квартиры, 
+				которую вы можете вернуть</strong>
+			</h1>
+			<span class="header-content__subtext">
+				ПРОЙДИТЕ ТЕСТ И ПОЛУЧИТЕ:
+			</span>
+			<p class="header-content__text">
+				Бесплатную консультацию юриста, 
+				﻿который поможет сделать <span>пошаговый план ﻿по возмещению ущерба</span>
+			</p>
+			<div class="header-prompt-abc">
+				<div class="header-prompt">
+					<div class="header-prompt-icon">
+						<img src="img/i.png" alt="">
+					</div>
+					<div class="header-prompt-content-abc">
+						<div class="header-prompt-content">
+							<p class="header-prompt__text">
+								Во время первой консультации <br class="mob-true">
+								мы определим обстоятельства <br class="mob-true">
+								дела и оценим масштаб ущерба.
+								<br>
+								<span>Вы увидите полную картину, 
+								а также 
+								узнаете, как правильно провести 
+								оценку ущерба и на что нужно 
+								обратить особое внимание</span>
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="header-content-document">
+				<img src="img/document-header.png" alt="" class="header-content-document__img">
+				<div class="header-content-document_text">
+					<h3 class="header-content-document__tilte">
+						ДОКУМЕНТ:
+					</h3>
+					<p class="header-content-document__subtitle">
+						10 ошибок при оценке ущерба, <br>
+						снижающие сумму выплат на 30-40%
+					</p>
+				</div>
+			</div>
+			<div class="header-content__btn-wrapper ">
+				<a href="#" class="header-content__btn btn btn-open">
+					<img src="img/btn-arrows_left.png" alt="" class="header-content__img pc-true">
+					<img src="img/arrow-btn-mobile-r.png" alt="" class="header-content__img mob-true">
+					<span>
+						Узнать размер компенсации <br>
+						и перспективы по делу
+					</span>
+					<img src="img/btn-arrows_right.png" alt="" class="header-content__img pc-true">
+					<img src="img/arrow-btn-mobile-l.png" alt="" class="header-content__img mob-true">
+				</a>
+				<span class="header-content__btn-wrapper_politic">
+					Тест бесплатный. Все данные защищены
+				</span>
+			</div>
+			<div class="header-content-name">
+				<div class="header-content-name__title">
+					<span>Иван Иванов</span>
+				</div>
+				<p class="header-content-name__text">
+					<span>Юрист компании «Компания»</span> <br>
+					В 2021 году помог возместить 140 млн. руб.
+				</p>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="best">
+	<img src="img/best-bg.jpg" alt="" class="section-bg pc-true">
+	<img src="img/best-bg-mobile.jpg" alt="" class="section-bg mob-true">
+	<div class="container">
+		<h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+			<span>1 104 577 руб.</span> — ﻿<br class="mob-true">cамая крупная сумма <br>
+			﻿возмещения за 2021 г<strong class="pc-true">од</strong>
+		</h2>
+		<p class="best-subtitle" data-aos="fade-up" data-aos-duration="1000">
+			В прошлом году мы подготовили более 250 отчетов по оценке ущерба 
+			<span>и возместили <br class="mob-true">ущерб в 100% случаев</span>
+		</p>
+		<div class="best-slider-wrapper">
+			<div class="best-slider" data-aos="fade-up" data-aos-duration="1000">
+				<div class="best-slide">
+					<a href="img/photo-slider.png" class="best-slide-photo" style="background-image: url('img/photo-slider.png');" data-fancybox>
+						<span class="slide-photo__abc">
+							<span class="slide-photo__zoom">
+								<img src="img/zoom.svg" alt="">
+							</span>
+						</span>
+					</a>
+					<div class="best-slide-content">
+						<h2 class="best-slide-content__title">
+							Возместили <span>350 000 руб.</span><br class="mob-true"> в споре 
+							о компенсации со страховой компанией
+						</h2>
+						<span class="best-slide-content__subtitle">
+							3х комнатная квартира ﻿с евро-ремонтом
+						</span>
+						<div class="best-slide-term">
+							<span>Срок работы:</span> 1 месяц
+						</div>
+						<div class="best-slide-term best-slide-term_title">
+							<span>По решению суда было взыскано:</span>
+						</div>
+						<ul class="best-slide-list">
+							<li class="best-slide-item">
+								374 000 руб. согласно отчету
+							</li>
+							<li class="best-slide-item">
+								187 000 руб. штраф 50%
+							</li>
+							<li class="best-slide-item">
+								28 000 руб. на судебные издержки
+							</li>
+						</ul>
+						<div class="best-slide__links">
+							<img src="img/document.png" alt="" class="best-slide__link_document">
+							<a href="#" class="best-slide__link">
+								Смотреть решение суда
+							</a>
+							<a href="" class="best-slide__link best-slide__link_2">
+								Смотреть оценочное заключение
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="best-slide">
+					<a href="img/photo-slider.png" class="best-slide-photo" style="background-image: url('img/photo-slider.png');" data-fancybox>
+						<span class="slide-photo__abc">
+							<span class="slide-photo__zoom">
+								<img src="img/zoom.svg" alt="">
+							</span>
+						</span>
+					</a>
+					<div class="best-slide-content">
+						<h2 class="best-slide-content__title">
+							Возместили <span>850 000 руб.</span> в споре 
+							о компенсации со страховой компанией
+						</h2>
+						<span class="best-slide-content__subtitle">
+							6х комнатная квартира ﻿с евро-ремонтом
+						</span>
+						<div class="best-slide-term">
+							<span>Срок работы:</span> 9 месяц
+						</div>
+						<div class="best-slide-term best-slide-term_title">
+							<span>По решению суда было взыскано:</span>
+						</div>
+						<ul class="best-slide-list">
+							<li class="best-slide-item">
+								374 000 руб. согласно отчету
+							</li>
+							<li class="best-slide-item">
+								187 000 руб. штраф 50%
+							</li>
+							<li class="best-slide-item">
+								28 000 руб. на судебные издержки
+							</li>
+						</ul>
+						<div class="best-slide__links">
+							<img src="img/document.png" alt="" class="best-slide__link_document">
+							<a href="#" class="best-slide__link">
+								Смотреть решение суда
+							</a>
+							<a href="" class="best-slide__link best-slide__link_2">
+								Смотреть оценочное заключение
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="best-slider-arrows">
+				<div class="best-slider-arrow-abc best-slider-arrow__l">
+					<a href="#" class="best-slider-arrow">
+						<img src="img/arrow-left.png" alt="">
+					</a>
+				</div>
+				<div class="best-slider-arrow-abc best-slider-arrow__r">
+					<a href="#" class="best-slider-arrow">
+						<img src="img/arrow-right.png" alt="">
+					</a>
+				</div>
+			</div>
+			<img src="img/pen.png" alt="" class="best-slider-pen pc-true">
+			<img src="img/pen-mobile.png" alt="" class="best-slider-pen mob-true">
+		</div>
+	</div>
+</section>
+<section class="files">
+	<img src="img/files-bg.png" alt="" class="section-bg pc-true">
+	<img src="img/files-bg-mobile.png" alt="" class="section-bg mob-true">
+	<div class="container">
+		<h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+			<strong>В результате теста вы <br class="mob-true"> поймете, <br class="pc-true"> </strong>
+			в какой ситуации вы сейчас находитесь <br>
+			на самом деле и <span>узнаете, как ее разрешить</span>
+		</h2>
+		<h3 class="files__text" data-aos="fade-up" data-aos-duration="1000">
+			А также получите:
+		</h3>
+		<div class="files-row">
+			<div class="files-block files-block-1" data-aos="fade-up" data-aos-duration="1000">
+				<h3 class="files-block__title">
+					Пошаговый план действий <br>
+					по взысканию ущерба
+				</h3>
+				<img src="img/files-block-1.png" alt="" class="files-block__img pc-true">
+				<img src="img/files-block-1_m.png" alt="" class="files-block__img mob-true">
+			</div>
+			<div class="files-block files-block-2" data-aos="fade-up" data-aos-duration="1500">
+				<h3 class="files-block__title">
+					Рекомендации по работе <br>
+					с соседями, УК или ГБУ
+				</h3>
+				<p class="files-block__subtext">
+					и узнаете, можно ли решить <br>
+					проблему без суда
+				</p>
+				<img src="img/files-block-2.png" alt="" class="files-block__img pc-true">
+				<img src="img/files-block-2_m.png" alt="" class="files-block__img mob-true">
+			</div>
+			<div class="files-block files-block-3" data-aos="fade-up" data-aos-duration="2000">
+				<h3 class="files-block__title">
+					Инструкцию «Как избежать 
+					ошибок при составлении <br class="pc-true">
+					акта <br class="mob-true">о заливе
+				</h3>
+				<p class="files-block__subtext">
+					и что делать, если <br>
+					они уже допущены»
+				</p>
+				<img src="img/files-block-3.png" alt="" class="files-block__img pc-true">
+				<img src="img/files-block-3_m.png" alt="" class="files-block__img mob-true">
+			</div>
+		</div>
+		<a href="#" class="files-content__btn btn btn-open" data-aos="fade-up" data-aos-duration="1000">
+			<img src="img/btn-arrows_left.png" alt="" class="header-content__img">
+			<span>
+				Узнать размер компенсации <br>
+				и перспективы по делу
+			</span>
+			<img src="img/btn-arrows_right.png" alt="" class="header-content__img">
+		</a>
+		<p class="files-content__text" data-aos="fade-up" data-aos-duration="1000">
+			Предварительные результаты и комментарии по вашему случаю <br class="pc-true">
+			вышлем в Мессенджер. <br class="mob-true"> Названивать не будем. Гарантируем!
+		</p>
+	</div>
+</section>
+<footer class="footer">
+	<div class="container">
+		<div class="footer-row">
+			<div class="footer-logo">
+				<img src="img/footer-logo.png" alt="" class="footer-logo__img">
+				<div class="footer-logo-text">
+					<p class="footer-logo__title">
+						За 2021 год помогли возместить 
+						140 млн. руб. 
+						от соседей, УК и ГБУ
+					</p>
+					<a href="#" class="footer-logo__politic">
+						Политика конфиденциальности
+					</a>
+				</div>
+			</div>
+			<div class="footer-soc">
+				<span class="footer-soc__title">
+					На связи 24/7. Ответим через минуту
+				</span>
+				<div class="nav-soc">
+					<a href="#" class="nav-soc__item nav-soc__item_1">
+						<img src="img/watcap.png" alt="" class="hover-none-img">
+						<img src="img/watcap_white.png" alt="" class="hover-true-img">
+					</a>
+					<a href="#" class="nav-soc__item nav-soc__item_2">
+						<img src="img/telegram.png" alt="" class="hover-none-img">
+						<img src="img/telegram_white.png" alt="" class="hover-true-img">
+					</a>
+					<a href="#" class="nav-soc__item nav-soc__item_3">
+						<img src="img/vkontakte.png" alt="" class="hover-none-img">
+						<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
+					</a>
+				</div>
+			</div>
+			<div class="footer-phones">
+				<span class="nav-phone__text">
+					Быстрая консультация по телефону
+				</span>
+				<a href="tel:88001234567" class="nav-phone__number">
+					<img src="img/phone.png" alt="">
+					8 800 123-45-67
+				</a>
+				<span class="footer-phones__time">
+					Звонок бесплатный. Работаем круглосуточно
+				</span>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- libs js -->
+<script src="js/libs.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="js/common.js"></script>
+<script>
+	
+</script>
+</body>
+
+</html>
