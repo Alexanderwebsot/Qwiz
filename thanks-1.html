@@ -16,7 +16,8 @@
 </head>
 <body>
 <header class="header header-thanks">
-	<img src="img/thanks-bg.jpg" alt="" class="header__bg">
+	<img src="img/thanks-bg.jpg" alt="" class="header__bg pc-true">
+	<img src="img/thank-bg-mobile.jpg" alt="" class="header__bg mob-true">
 	<nav class="header-nav">
 		<div class="container">
 			<div class="nav-row" data-aos="fade-bottom" data-aos-duration="1000">
@@ -29,29 +30,32 @@
 						и области. Работаем с 2016 года
 					</p>
 				</a>
-				<div class="nav-soc">
-					<a href="#" class="nav-soc__item nav-soc__item_1">
-						<img src="img/watcap.png" alt="" class="hover-none-img">
-						<img src="img/watcap_white.png" alt="" class="hover-true-img">
-					</a>
-					<a href="#" class="nav-soc__item nav-soc__item_2">
-						<img src="img/telegram.png" alt="" class="hover-none-img">
-						<img src="img/telegram_white.png" alt="" class="hover-true-img">
-					</a>
-					<a href="#" class="nav-soc__item nav-soc__item_3">
-						<img src="img/vkontakte.png" alt="" class="hover-none-img">
-						<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
-					</a>
+				<div class="nav-mobile-wrapper">
+					<div class="nav-soc">
+						<a href="#" class="nav-soc__item nav-soc__item_1">
+							<img src="img/watcap.png" alt="" class="hover-none-img">
+							<img src="img/watcap_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_2">
+							<img src="img/telegram.png" alt="" class="hover-none-img">
+							<img src="img/telegram_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_3">
+							<img src="img/vkontakte.png" alt="" class="hover-none-img">
+							<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
+						</a>
+					</div>
+					<div class="nav-phone">
+						<a href="tel:88001234567" class="nav-phone__number">
+							<img src="img/phone.png" alt="">
+							8 800 123-45-67
+						</a>
+						<span class="nav-phone__text">
+							Консультация бесплатно
+						</span>
+					</div>
 				</div>
-				<div class="nav-phone">
-					<a href="tel:88001234567" class="nav-phone__number">
-						<img src="img/phone.png" alt="">
-						8 800 123-45-67
-					</a>
-					<span class="nav-phone__text">
-						Консультация бесплатно
-					</span>
-				</div>
+				
 			</div>
 		</div>
 	</nav>
@@ -70,7 +74,7 @@
 						Пошаговый план действий <br>
 						по взысканию ущерба
 					</p>
-					<a href="#" class="header-thanks__btn btn">
+					<a href="document-1.pdf" class="header-thanks__btn btn" download>
 						<span>
 							скачать
 						</span>
@@ -86,7 +90,7 @@
 						Рекомендации по работе <br>
 						с соседями, УК или ГБУ
 					</p>
-					<a href="#" class="header-thanks__btn btn">
+					<a href="document-2.pdf" class="header-thanks__btn btn" download>
 						<span>
 							скачать
 						</span>
@@ -103,7 +107,7 @@
 						ошибок при составлении <br>
 						акта о заливе
 					</p>
-					<a href="#" class="header-thanks__btn btn">
+					<a href="document-3.doc" class="header-thanks__btn btn" download>
 						<span>
 							скачать
 						</span>
@@ -115,14 +119,15 @@
 	</div>
 </header>
 <section class="analysis">
-	<img src="img/analysis-bg.png" alt="" class="section-bg">
+	<img src="img/analysis-bg.png" alt="" class="section-bg pc-true">
+	<img src="img/analysis-bg-mobile.jpg" alt="" class="section-bg mob-true">
 	<div class="container">
 		<div class="analysis-row">
 			<div class="analysis-content">
 				<h2 class="analysis-content__title" data-aos="fade-right" data-aos-duration="1000">
 					Результаты анализа по перспективам 
 					дела и стоимость оценки <strong>отправим <br>
-					в <span class="analysis-message analysis-message__wh">WhatsApp</span> на указанный номер</strong> <img src="img/arrow-analitic-r.png" alt="">
+					в <span class="analysis-message analysis-message__wh">WhatsApp<br class="mob-true"></span> на указанный номер</strong> <img src="img/arrow-analitic-r.png" alt="">
 				</h2>
 				<p class="analysis-content__text" data-aos="fade-right" data-aos-duration="1000">
 					Если вы ввели неправильный номер — <br>
@@ -133,7 +138,7 @@
 				<span class="analysis-form__title">
 					Вы указали номер:
 				</span>
-				<a href="tel:89121234567" class="analysis-form__number">
+				<a href="" class="analysis-form__number">
 					+7 (912) 123-45-67
 				</a>
 				<p class="analysis-form__text">
@@ -154,9 +159,12 @@
 	</div>
 </section>
 <section class="reviews">
-	<img src="img/reviews-bg.png" alt="" class="section-bg">
+	<img src="img/reviews-bg.png" alt="" class="section-bg pc-true">
+	<img src="img/rev-bg-mobile.png" alt="" class="section-bg mob-true">
+
 	<div class="container">
-		<img src="img/email.png" alt="" class="reviews-mail">
+		<img src="img/email.png" alt="" class="reviews-mail pc-true">
+		<img src="img/mail-mobile.png" alt="" class="reviews-mail mob-true">
 		<h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
 			А пока вы ждете звонок от юриста, <br>
 			<strong>посмотрите отзывы</strong> людей, которым мы помогли 
@@ -446,6 +454,24 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script>
+	let index_messag = localStorage.getItem('messager_index');
+	let phone_use = localStorage.getItem('phone_user')
+	
+	if (index_messag == 0) {
+		$('.analysis-message__wh').text('WhatsApp')
+		$('.analysis-message__wh').addClass('messager-0');
+	}
+	if (index_messag == 1) {
+		$('.analysis-message__wh').text('Telegram')
+		$('.analysis-message__wh').addClass('messager-1');
+	}
+	if (index_messag == 2) {
+		$('.analysis-message__wh').text('SMS')
+		$('.analysis-message__wh').addClass('messager-2');
+	}
+
+
+	$('.analysis-form__number').text(phone_use);
 	AOS.init();
 </script>
 <script src="js/common.js"></script>

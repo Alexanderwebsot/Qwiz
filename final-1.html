@@ -16,7 +16,8 @@
 </head>
 <body>
 <header class="header header-final">
-	<img src="img/final-bg.jpg" alt="" class="header__bg">
+	<img src="img/final-bg.jpg" alt="" class="header__bg pc-true">
+	<img src="img/final-bg-mob.jpg" alt="" class="header__bg mob-true">
 	<nav class="header-nav">
 		<div class="container">
 			<div class="nav-row" data-aos="fade-bottom" data-aos-duration="1000">
@@ -29,46 +30,49 @@
 						и области. Работаем с 2016 года
 					</p>
 				</a>
-				<div class="nav-soc">
-					<a href="#" class="nav-soc__item nav-soc__item_1">
-						<img src="img/watcap.png" alt="" class="hover-none-img">
-						<img src="img/watcap_white.png" alt="" class="hover-true-img">
-					</a>
-					<a href="#" class="nav-soc__item nav-soc__item_2">
-						<img src="img/telegram.png" alt="" class="hover-none-img">
-						<img src="img/telegram_white.png" alt="" class="hover-true-img">
-					</a>
-					<a href="#" class="nav-soc__item nav-soc__item_3">
-						<img src="img/vkontakte.png" alt="" class="hover-none-img">
-						<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
-					</a>
+				<div class="nav-mobile-wrapper">
+					<div class="nav-soc">
+						<a href="#" class="nav-soc__item nav-soc__item_1">
+							<img src="img/watcap.png" alt="" class="hover-none-img">
+							<img src="img/watcap_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_2">
+							<img src="img/telegram.png" alt="" class="hover-none-img">
+							<img src="img/telegram_white.png" alt="" class="hover-true-img">
+						</a>
+						<a href="#" class="nav-soc__item nav-soc__item_3">
+							<img src="img/vkontakte.png" alt="" class="hover-none-img">
+							<img src="img/vkontakte_white.png" alt="" class="hover-true-img">
+						</a>
+					</div>
+					<div class="nav-phone">
+						<a href="tel:88001234567" class="nav-phone__number">
+							<img src="img/phone.png" alt="">
+							8 800 123-45-67
+						</a>
+						<span class="nav-phone__text">
+							Консультация бесплатно
+						</span>
+					</div>
 				</div>
-				<div class="nav-phone">
-					<a href="tel:88001234567" class="nav-phone__number">
-						<img src="img/phone.png" alt="">
-						8 800 123-45-67
-					</a>
-					<span class="nav-phone__text">
-						Консультация бесплатно
-					</span>
-				</div>
+				
 			</div>
 		</div>
 	</nav>
 	<div class="container header-final-row">
-		<div class="header-final-content">
-			<h1 class="header-final-content__title" data-aos="fade-right" data-aos-duration="1000">
+		<div class="header-final-content" data-aos="fade-right" data-aos-duration="1000">
+			<h1 class="header-final-content__title" >
 				Мы получили ваши ответы 
 				<span>и уже знаем, что делать 
 				в вашей ситуации</span>
 			</h1>
-			<p class="header-final-content__text" data-aos="fade-right" data-aos-duration="1000">
+			<p class="header-final-content__text">
 				<span>В течение 15 минут</span> мы свяжемся с вами, чтобы 
 				оценить перспективы дела, дать комментарии 
 				и назвать возможную сумму, которую вы сможете 
 				взыскать с виновника залива
 			</p>
-			<div class="header-final-block" data-aos="fade-right" data-aos-duration="1000">
+			<div class="header-final-block">
 				<img src="img/avatar-cpec.png" alt="" class="header-final-block__img">
 				<div class="header-final-block-text">
 					<p class="header-final-block__title">
@@ -92,7 +96,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="header-final-files" data-aos="fade-right" data-aos-duration="1000">
+			<div class="header-final-files">
 				<h2 class="header-final-files__title">
 					Файлы откроются сразу ﻿после отправки формы
 				</h2>
@@ -111,7 +115,8 @@
 						акта о заливе
 					</p>
 				</div>
-				<img src="img/files-finality.png" alt="" class="header-final-files__img">
+				<img src="img/files-finality.png" alt="" class="header-final-files__img pc-true">
+				<img src="img/files-finality-mob.png" alt="" class="header-final-files__img mob-true">
 			</div>
 		</div>
 		<form action="#" class="header-final-form" data-aos="fade-left" data-aos-duration="1000">
@@ -155,13 +160,15 @@
 					<span>SMS</span>
 				</div>
 			</div>
-			<button class="form__btn btn">
-				<img src="img/btn-arrows_left.png" alt="" class="header-content__img">
+			<button class="form__btn btn form__btn_send">
+				<img src="img/btn-arrows_left.png" alt="" class="header-content__img pc-true">
+				<img src="img/arrow-btn-mobile-r.png" alt="" class="header-content__img mob-true">
 				<span>
 					получить <br>
 					рекомендации + файлы
 				</span>
-				<img src="img/btn-arrows_right.png" alt="" class="header-content__img">
+				<img src="img/btn-arrows_right.png" alt="" class="header-content__img pc-true">
+				<img src="img/arrow-btn-mobile-l.png" alt="" class="header-content__img mob-true">
 			</button>
 			<p class="header-final-form__text">
 				Ваши контактные данные на 100% защищены. <br>
@@ -170,10 +177,70 @@
 			</p>
 			<p class="header-final-form__politic">
 				Отправляя контактные данные вы соглашаетесь <br>
-				<br>
+				<br class="pc-true">
 				﻿с <a href="#">условиями обработки персональных данных</a>
 			</p>
 		</form>
+	</div>
+	<div class="container" class="final-wrap-abc">
+		<div class="container header-thanks-content">
+			<div class="header-thanks-files">
+				<h2 class="header-thanks__title">
+					Файлы уже <strong>готовы</strong> для скачивания
+				</h2>
+				<div class="header-thanks-row">
+					<div class="header-thanks-block">
+						<span class="header-thanks-block__type">
+							PDF
+						</span>
+						<img src="img/files-thank-1.png" alt="" class="header-thanks-block__img">
+						<p class="header-thanks-block__text">
+							Пошаговый план действий <br>
+							по взысканию ущерба
+						</p>
+						<a href="#" class="header-thanks__btn btn">
+							<span>
+								скачать
+							</span>
+							<img src="img/arrow-bottom.png" alt="" class="header-content__img">
+						</a>
+					</div>
+					<div class="header-thanks-block">
+						<span class="header-thanks-block__type">
+							PDF
+						</span>
+						<img src="img/files-thank-2.png" alt="" class="header-thanks-block__img">
+						<p class="header-thanks-block__text">
+							Рекомендации по работе <br>
+							с соседями, УК или ГБУ
+						</p>
+						<a href="#" class="header-thanks__btn btn">
+							<span>
+								скачать
+							</span>
+							<img src="img/arrow-bottom.png" alt="" class="header-content__img">
+						</a>
+					</div>
+					<div class="header-thanks-block">
+						<span class="header-thanks-block__type">
+							DOC
+						</span>
+						<img src="img/files-thank-3.png" alt="" class="header-thanks-block__img">
+						<p class="header-thanks-block__text">
+							Инструкция «Как избежать <br>
+							ошибок при составлении <br>
+							акта о заливе
+						</p>
+						<a href="#" class="header-thanks__btn btn">
+							<span>
+								скачать
+							</span>
+							<img src="img/arrow-bottom.png" alt="" class="header-content__img">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 </header>
@@ -201,6 +268,7 @@
 	$(input_4).val(input_val4);
 	$(input_5).val(input_val5);
 
+	console.log($(input_2).val())
 </script>
 <script>
 	AOS.init();
