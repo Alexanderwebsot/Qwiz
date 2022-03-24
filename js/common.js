@@ -2,6 +2,8 @@ $(document).ready(function () {
   $('.best-slider').on('init', function(event, slick){
     AOS.init();
   });
+
+  $
   jQuery(function($){
     $(document).mouseup( function(e){ // событие клика по веб-документу
       let div = $("#qwiz-modal-inner"); // тут указываем ID элемента
@@ -23,6 +25,7 @@ $(document).ready(function () {
     
   })
 
+  let qwiz_cnt_5 = true;
  
 
   $('.header-final-form-messagers_wrapper').on('click', function() {
@@ -44,13 +47,19 @@ $(document).ready(function () {
   });
 
   $('.btn-open').on('click', function() {
+    ym(87972804,'reachGoal','quiz-start')
+
     $('.qwiz-modal').addClass('qwiz-modal-active');
     $('html').addClass('overflow-body');
   	return false;
   })
   console.log()
 
+  let yes_to_next = false;
+
   $('.qwiz-modal-slide-item').on('click', function() {
+    //yes_to_next = true;
+    yes_to_next = false;
     let parent = $(this).parent('.qwiz-modal-slide-row');
     parent = $(parent).children('.qwiz-modal-slide-item');
     $(parent).removeClass('qwiz-modal-slide-item_active');
@@ -61,6 +70,13 @@ $(document).ready(function () {
     //let parent_all = $(this).closest('.slick-track')
     let count = $(parent_final).attr('data-slick-index');
     if (count == 4) {
+
+      if (qwiz_cnt_5) {
+        ym(87972804,'reachGoal','quiz_step_5');
+        qwiz_cnt_5 = false;
+        
+      }
+
       if ($('.qwiz-modal-slide-item_no').hasClass('qwiz-modal-slide-item_active')) {
         let elemets = $('.qwiz-modal-slider-all_slide')[1];
         let element = $(elemets).find('.qwiz-modal-slide-item');
@@ -241,15 +257,38 @@ $(document).ready(function () {
     slide = $(slide_parent).find('.qwiz-modal-slide-item_active');
     if (slide[0] != undefined) {
       //$('.qwiz-modal-slider-all').slick('slickNext');
+
+      let slide_now = $('.qwiz-modal-slider-all').find('.slick-current');
+      slide_now = $(slide_now)[0]
+      let test_item = $(slide_now).find('.qwiz-modal-slide-item_active');
+
+      if ($(test_item).hasClass('qwiz-modal-slide-item_no')) {
+        if (yes_to_next) {
+          $('.qwiz-modal-slider-all').slick('slickGoTo', 2);
+          
+        }
+      }
+      else{
+        if (yes_to_next) {
+          $('.qwiz-modal-slider-all').slick('slickNext');
+        }
+      }
     }
     else{
       $(slide_parent).addClass('slider-not-select');
     }
+
+
     //
     return false;
   })
 
   $('.qwiz-modal-slider-all').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    //yes_to_next = false;
+
+    //let test_item = $(nextSlide).find('.qwiz-modal-slide-item_active');
+    //console.log(test_item);
+
     if (currentSlide == 0) {
       if ($('.qwiz-modal-slide-item_yes').hasClass('qwiz-modal-slide-item_active')) {
         //$(this).slick('slickGoTo', 3);
@@ -264,9 +303,47 @@ $(document).ready(function () {
     let counter = nextSlide;
     let ele = $('.qwiz-modal-slider-all_slide')[counter]
     let element = $(ele).find('.qwiz-modal-slide-item_active');
-    $(element).removeClass('qwiz-modal-slide-item_active');
+    //$(element).removeClass('qwiz-modal-slide-item_active');
   });
   
+  let qwiz_cnt_1 = true;
+  let qwiz_cnt_2 = true;
+  let qwiz_cnt_3 = true;
+  let qwiz_cnt_4 = true;
+  
+
+
+  $('.qwiz-modal-slider-all').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    
+    if (currentSlide == 1 && qwiz_cnt_1) {
+      ym(87972804,'reachGoal','quiz_step_1');
+      qwiz_cnt_1 = false;
+    }
+    if (currentSlide == 2 && qwiz_cnt_2) {
+      ym(87972804,'reachGoal','quiz_step_2');
+      qwiz_cnt_2 = false;
+    }
+    if (currentSlide == 3 && qwiz_cnt_3) {
+      ym(87972804,'reachGoal','quiz_step_3');
+      qwiz_cnt_3 = false;
+    }
+    if (currentSlide == 4 && qwiz_cnt_4) {
+      ym(87972804,'reachGoal','quiz_step_4');
+      qwiz_cnt_4 = false;
+    }
+
+
+
+    let slide_now = $('.qwiz-modal-slider-all').find('.slick-current');
+    slide_now = $(slide_now)[0]
+    let test_item = $(slide_now).find('.qwiz-modal-slide-item_active');
+    test_item = test_item[0]
+    if (test_item != undefined) {
+      yes_to_next = true;
+    }
+    
+  });
+
   $('.form__btn_send').on('click', function() {
     let input_val = $('.phone').val();
     let check_1 = false;
